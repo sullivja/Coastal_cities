@@ -31,9 +31,6 @@
 
 <body>
 
-<embed name="waves" src="music/waves.wav" loop="false" hidden="true" autostart="true">
-</embed>
-
 <div id="storymap" class="container-fluid">
     <div class="row">
         <div class="col-sm-6 col-md-8 storymap-map"></div>
@@ -47,6 +44,15 @@
             <section data-scene="scene3">
                 <h2>scene 3</h2>
             </section>
+            <section data-scene="scene4">
+                <h2>scene 4</h2>
+            </section>
+            <section data-scene="scene5">
+                <h2>scene 5</h2>
+            </section>
+            <section data-scene="scene6">
+                <h2>scene 6</h2>
+            </section>
         </div>
 
     </div>
@@ -58,9 +64,9 @@
             legend: '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'
         },
         layer2: {
-            layer: L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ore_counties&outputFormat=application%2Fjson', {
-                color: 'orange',
-                weight: 5
+            layer: L.geoJson.ajax('assets/xxl_tsunami_simplified.geojson', {
+                color: 'red',
+                weight: 2
             }),
             legend: '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>'
         },
@@ -70,8 +76,11 @@
     };
     var scenes = {
         scene1: {lat: 44.0563432, lng: -123.5099875, zoom:  7, layers: ['layer2'], name: "scene 1"},
-        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 10, layers: ['layer2'], name: "scene 2"},
-        scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12, layers: ['layer1', 'layer2'], name: "scene 3"}
+        scene2: {lat:  44.621142, lng: -124.058853, zoom: 12, layers: ['layer2'], name: "Newport"},
+        scene3: {lat:  46.182884, lng: -123.840155, zoom: 12, layers: ['layer1', 'layer2'], name: "Astoria"},
+        scene4: {lat:  45.992321, lng: -123.921503, zoom: 12, layers: ['layer1', 'layer2'], name: "Seaside"},
+        scene5: {lat:  44.970811, lng: -124.014837, zoom: 12, layers: ['layer1', 'layer2'], name: "scene 5"},
+        scene6: {lat:  45.460815, lng: -123.848690, zoom: 13, layers: ['layer1', 'layer2'], name: "Tillamook"}
     };
     $('#storymap').storymap({
         scenes: scenes,
@@ -94,8 +103,6 @@
 </script>
 
 
-    <embed name="waves" src="music/waves.wav" loop="false" hidden="true" autostart="true">
-    </embed>
 
 </body>
 
