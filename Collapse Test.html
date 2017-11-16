@@ -31,6 +31,8 @@
     <script src="dist/storymap.2.3.js"></script>
 
 
+
+
 </head>
 
 
@@ -64,16 +66,21 @@
             </section>
 
             <section data-scene="scene3">
-                <h2>Seaside</h2>
-                <p>
-                    <img src="assets/seaside_aerial.jpg" alt="Not working" width="500">
-                </p>
-                <p>Seaside is a small resort city in northwestern Oregon. Its beach is known for surf breaks and a 1920s promenade. The Seaside Aquarium has touch tanks and a seal exhibit.
-                </p>
-
-                <p>Elevation: 17.06′</p>
-
-                <p>Population 6,685</p>
+                <div class="container">
+                    <h2>Collapse test</h2>
+                    <p>Doing stuff about portland.</p>
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Portland</button>
+                    <div id="demo" class="collapse">
+                        <p>
+                            Portland, Oregon's largest city, sits on the Columbia and Willamette rivers, in the shadow of snow-capped Mount Hood.
+                            It's known for its parks, bridges and bicycle paths, as well as for its eco-friendliness and its microbreweries and coffeehouses.
+                            Iconic Washington Park encompasses sites from the formal Japanese Garden to Oregon Zoo and its railway. The city hosts thriving art, theater and music scenes.
+                        </p>
+                        <p>
+                            <img src="assets/Lincoln_city.jpg" alt="Not Working" width="500">
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <section data-scene="scene4">
@@ -114,7 +121,7 @@
 <script type="text/javascript">
     var layers = {
         layer1: {
-            layer: L.tileLayer('https://api.mapbox.com/styles/v1/sullivja/cj98sm01i1tmu2rp8hgje1xrx/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3VsbGl2amEiLCJhIjoiY2o4eGZlZW8wMXpkZzJ4cXprZm9jcDVuYyJ9.ADpeebksIzJDvaFsWAO7TA'),
+            layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
             legend: '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'
         },
         layer2: {
@@ -139,7 +146,7 @@
     $('#storymap').storymap({
         scenes: scenes,
         layers: layers,
-        baselayer: layers.layer1,
+        baselayer: layers.layer3,
         legend: true,
         loader: true,
         flyto: true,

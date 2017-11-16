@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 
-    <embed name="waves" src="music/waves.wav" loop="false" hidden="true" autostart="true">
+<audio controls autoplay>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="music/waves.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
     </embed>
 
 
+
+
+
+<p>adding anything else</p>
+    <div class="container">
+        <h2>Accordion Example</h2>
+        <p><strong>Note:</strong> We <strong>living</strong> the collapse life</p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse"  href="#collapse1">Breakfast</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">cereal</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Lunch</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">sandwitches.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Dinner</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">Turkey.</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
