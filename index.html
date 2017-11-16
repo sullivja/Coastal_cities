@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="dist/storymap.2.3.css">
     <!--Mapbox-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css" rel='stylesheet'/>
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="shortcut icon" href="assets/wave32.png" type="image/x-icon">
     <!--add required libraries-->
@@ -40,6 +42,15 @@
     <div class="row">
         <div class="col-sm-6 col-md-8 storymap-map"></div>
         <div class="col-sm-6 col-md-4 storymap-story">
+            <section data-scene="overview" data-background="assets/coastal.mp4">
+                <div class="fullscreen text-center">
+                    <h1>The Big Splash</h1>
+                    <h1>
+                        <small style="color: rgba(255,255,255,0.95)"> Towns in the Oregon coast are in danger in the event of a Tsunami
+                        </small>
+                    </h1>
+                </div>
+            </section>
             <section data-scene="scene1">
                 <h2>Tsunami Inundation</h2>
                 <p>Many cities on the oregon coast have sizable portions that will be completely swallowed by a sizable Tsunami caused by the Cascadia Subduction Zone Earthquake in what's called an Inundation Zone</p>
@@ -156,7 +167,23 @@
     });
 </script>
 
-
+dl>
+<dt>
+    <!--facebook icon-->
+    <a class="fa fa-facebook-square btn"
+       href="https://facebook.com/sharer.php?u=http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.3/video.html"
+       target="_blank"></a>
+</dt>
+<dt>
+    <!--facebook icon-->
+    <a class="fa fa-git-square btn" href="https://github.com/jakobzhao/storymap" style="top:40px"
+       target="_blank"></a>
+</dt>
+<dt>
+    <!--info icon-->
+    <i class="fa fa-file-text-o btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+</dt>
+</dl>
 
 </body>
 
